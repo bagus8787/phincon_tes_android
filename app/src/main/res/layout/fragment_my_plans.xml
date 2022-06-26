@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragment.PdfFragment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_noback"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dimen_32"
+                android:orientation="vertical">
+
+                <!--        Plan Document-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin5"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/plan_documents"
+                    android:textSize="20sp"
+                    android:textAlignment="center"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="4dp"
+                    android:layout_margin="3dp"
+                    app:cardElevation="5dp">
+
+                    <com.gib.pokemon_bagus.helper.AutoFitGridRecyclerView
+                        android:id="@+id/rv_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:listSelector="@android:color/transparent"
+                        tools:listitem="@layout/item_plant_documents" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!--        Form and Information-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:layout_marginBottom="@dimen/margin5"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/form_and_information"
+                    android:textSize="20sp"
+                    android:textAlignment="center"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="4dp"
+                    android:layout_margin="3dp"
+                    app:cardElevation="5dp">
+
+                    <com.gib.pokemon_bagus.helper.AutoFitGridRecyclerView
+                        android:id="@+id/rv_form"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:listSelector="@android:color/transparent"
+                        tools:listitem="@layout/item_plant_documents" />
+                </androidx.cardview.widget.CardView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/video"
+        android:checked="true"
+        android:icon="@drawable/ic_arrow_drop_down_black_24dp"
+        android:title="Video" />
+
+    <item
+        android:id="@+id/pdf"
+        android:icon="@drawable/ic_arrow_drop_down_black_24dp"
+        android:title="Pdf" />
+
+</menu>
